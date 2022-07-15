@@ -10,7 +10,8 @@ const { Search } = Input;
 
 const fetchUsers = async () => {
   const { data } = await axios.get(
-    "https://unicomer-back.herokuapp.com/clients/"
+    "https://unicomer-nest.herokuapp.com/clients/"
+    // "http://localhost:4000/clients"
   );
   return { data }
 }
@@ -56,7 +57,7 @@ export default function App() {
               loading,
               pagination: {
                 defaultCurrent: 1,
-                pageSize: 15
+                pageSize: 10
               }
             }}
             mobileBreakPoint={768}
